@@ -1,65 +1,44 @@
-# youtube_capstone_project
+# Personal Portfolio - Resume Matching Project
 
-The **youtube_capstone_project** is designed for harvesting data from YouTube, providing a structured approach for data collection, transformation, and analysis. The project is divided into three distinct sections within a Streamlit application to simplify both user and developer interaction.
+Welcome to my personal portfolio showcasing a fascinating project: **Resume Matching**. In this project, I embarked on an exciting journey to leverage Natural Language Processing (NLP) and Machine Learning to streamline the hiring process and connect the right candidates with job openings. Here's an overview of the project:
 
-## Project Sections
+## Project Overview
 
-1. **Youtube_Data_Harvesting**:
-    - This section focuses on pulling data from YouTube by providing channel IDs as input and pushing it into a MongoDB Atlas database.
-    - Users can input the number of YouTube channels they want to assess.
-    - Input boxes are dynamically created for channel IDs based on the number input.
-    - After entering the channel IDs, users can click "Get Details" to proceed.
-    - Channel details, playlists, playlist items, and video details are extracted and saved in MongoDB.
-    - A completion message is displayed along with navigation guidance to the next section in the sidebar.
+**Data Collection and Preparation:**
+- A dataset containing PDFs of live resumes from a job portal was made available via a web link.
+- I extracted information from these PDF resumes and meticulously organized the data into a structured CSV file.
 
-2. **Creating DataFrames and Loading the SQL Database**:
-    - In this section, data stored in MongoDB is extracted and structured into DataFrames for further analysis.
-    - Channel details are saved as-is in a DataFrame.
-    - Playlist details and playlist item details are merged based on the playlist ID to create a consolidated DataFrame with all necessary fields.
-    - Video details are transformed, including converting the published date column to datetime.
-    - A DataFrame for comment details is created from the MongoDB data.
-    - Users are prompted to click a button to send all DataFrames to an SQL database.
-    - The SQL database connection is established, and the data from DataFrames is loaded into the database.
-    - DataFrames are displayed for reference, and users are guided to the next section.
+**Job Descriptions:**
+- To complete the puzzle, I collected job descriptions from various companies, sourced from Kaggle and provided in CSV format through a data link.
 
-3. **Querying SQL Database**:
-    - In this section, various queries mentioned in the project description are executed one by one.
-    - The query results are received as SQL tables and displayed as DataFrames.
+**Data Preprocessing:**
+- Ensured that both resume and job description data were cleaned, pre-processed, and tokenized to facilitate further analysis.
 
-For more information on using the YouTube API in Python, refer to [this guide](https://www.thepythoncode.com/article/using-youtube-api-in-python).
+**Embedding Using DistilBERT:**
+- To unlock the power of contextual embeddings, I utilized DistilBERT, a state-of-the-art language model, to transform the textual data into meaningful numerical representations.
 
-## Usage
+**Cosine Similarity Analysis:**
+- Here comes the magic! I computed cosine similarity scores between job descriptions and resumes to determine how well they match.
+- The top 5 resumes with the highest cosine similarity scores were selected as the most suitable candidates for each job.
 
-1. Clone the repository:
+## Why This Project Matters
 
-   ```bash
-   git clone https://github.com/svramprabu/youtube_capstone_project
-   cd youtube_capstone_project
-   ```
+- **Efficiency**: The project significantly streamlines the hiring process, helping HR professionals and hiring managers save time and resources.
+- **Precision**: By leveraging NLP and machine learning, we ensure a higher degree of precision in matching job descriptions with resumes.
+- **Personalization**: Tailoring job recommendations based on actual content ensures that candidates are a good fit for the roles they're being considered for.
 
-2. Install the required dependencies:
+## Explore the Project
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+You can dive deeper into this project, explore the code, and see it in action in my GitHub repository:
 
-3. Run the Streamlit application:
-
-   ```bash
-   streamlit run YouTube_Data_Harvesting.py
-   ```
-
-4. Follow the guided sections within the application to harvest, process, and analyze YouTube data.
-
-## Contributors
-
-- Ramprabu S V
-<!-- - Another Contributor (if applicable) -->
+[Resume Matching Project Repository](https://github.com/svramprabu/Resume-Matching-with-Job-Descriptions-Using-PDF-CVs)
 
 ## License
 
-This project is a free to use/clone public repository.
+This project is open-source and does not have a specific license.
 
----
+Feel free to reach out if you have questions, feedback, or would like to collaborate on similar projects. Let's connect and explore more exciting opportunities together!
 
-Feel free to contribute to this project or report any issues on the [GitHub repository](https://github.com/svramprabu/youtube_capstone_project). Your feedback and contributions are highly appreciated and will help enhance the functionality and usability of this project.
+#NLP #MachineLearning #ResumeMatching #Portfolio #DataScience #GitHub #LinkedIn #CareerOpportunities
+
+Disclaimer: This project is intended for educational and research purposes. The accuracy of the resume matching models may vary depending on the quality and quantity of data used.
